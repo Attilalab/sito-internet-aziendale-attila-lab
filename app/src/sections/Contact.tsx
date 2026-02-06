@@ -15,7 +15,7 @@ export default function Contact() {
     name: '',
     email: '',
     phone: '',
-    message: '',
+    title: '',
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -23,53 +23,42 @@ export default function Contact() {
     setIsLoading(true);
     setError('');
 
-    if (!formRef.current) return;
-
     try {
-      // Aggiungo campi nascosti per EmailJS
-      const form = formRef.current;
-      
-      // Creo input nascosti per i parametri extra
-      const timeInput = document.createElement('input');
-      timeInput.type = 'hidden';
-      timeInput.name = 'time';
-      timeInput.value = new Date().toLocaleString('it-IT');
-      form.appendChild(timeInput);
+      // Prepara i parametri per il template EmailJS
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        title: formData.title,
+        phone: formData.phone || 'Non fornito',
+        time: new Date().toLocaleString('it-IT'),
+      };
 
-      await emailjs.sendForm(
+      await emailjs.send(
         'service_pop8uae',
         'template_83plbpm',
-        form,
+        templateParams,
         'l6vIjPkz4Hqffr9Os'
       );
 
-      // Rimuovo l'input aggiunto
-      form.removeChild(timeInput);
-
       setIsSubmitted(true);
-      setFormData({ name: '', email: '', phone: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', title: '' });
       
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
     } catch (err: any) {
       console.error('EmailJS Error:', err);
-      setError(`Errore: ${err.text || 'Riprova più tardi'}`);
+      setError(`Errore: ${err.text || err.message || 'Riprova più tardi'}`);
     } finally {
       setIsLoading(false);
     }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const fieldName = e.target.name;
-    // Mappa i nomi dei campi EmailJS ai nomi dello state
-    const stateField = fieldName === 'from_name' ? 'name' : 
-                       fieldName === 'reply_to' ? 'email' : 
-                       fieldName;
-    
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [stateField]: e.target.value
+      [name]: value
     }));
   };
 
@@ -113,9 +102,6 @@ export default function Contact() {
                   </div>
                 ) : (
                   <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-                    {/* Input nascosti per EmailJS */}
-                    <input type="hidden" name="to_email" value="attila.lab@hotmail.com" />
-                    
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="name" className="text-gray-300">
@@ -123,7 +109,7 @@ export default function Contact() {
                         </Label>
                         <Input
                           id="name"
-                          name="from_name"
+                          name="name"
                           type="text"
                           required
                           value={formData.name}
@@ -138,7 +124,7 @@ export default function Contact() {
                         </Label>
                         <Input
                           id="email"
-                          name="reply_to"
+                          name="email"
                           type="email"
                           required
                           value={formData.email}
@@ -165,14 +151,14 @@ export default function Contact() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="text-gray-300">
+                      <Label htmlFor="title" className="text-gray-300">
                         Messaggio <span className="text-cyan-400">*</span>
                       </Label>
                       <Textarea
-                        id="message"
-                        name="message"
+                        id="title"
+                        name="title"
                         required
-                        value={formData.message}
+                        value={formData.title}
                         onChange={handleChange}
                         placeholder="Descrivi il tuo progetto in poche righe..."
                         rows={5}
