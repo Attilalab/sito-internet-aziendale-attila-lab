@@ -79,8 +79,9 @@ export default function Contact() {
               <span className="gradient-text">Contattaci</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Hai un progetto in mente? Descrivilo in poche righe e ti risponderemo 
-              in poche ore per capire insieme come possiamo aiutarti.
+              Descrivi in poche righe il progetto o l'idea che vorresti sviluppare. 
+              Riceverai una risposta in breve tempo, con i prossimi passi suggeriti 
+              e le informazioni necessarie per valutare la collaborazione.
             </p>
           </div>
 
@@ -248,7 +249,7 @@ export default function Contact() {
                   Dati societari
                 </h3>
                 <div className="space-y-2 text-sm text-gray-400">
-                  <p>Ditta Individuale di Loredana Guida</p>
+                  <p>Attila Lab - Digital Studio & AI</p>
                   <p>P.IVA: [in attesa di attribuzione]</p>
                   <p>Sede legale: Italia</p>
                 </div>

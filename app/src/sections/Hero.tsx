@@ -47,12 +47,13 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-gray-400 mb-4 max-w-2xl mx-auto leading-relaxed">
-            Progettiamo e costruiamo siti web, web-app e soluzioni su misura, 
-            integrando dove serve l'intelligenza artificiale.
+            Progettiamo e realizziamo siti web, web-app e soluzioni digitali su misura, 
+            integrando l'intelligenza artificiale solo quando porta un vantaggio concreto.
           </p>
           
           <p className="text-base text-gray-500 mb-10 max-w-xl mx-auto">
-            Dal primo wireframe alla messa online, seguiamo tutto il ciclo del progetto.
+            Dal primo wireframe alla messa online, seguiamo l'intero ciclo del progetto: 
+            analisi, progettazione, sviluppo, test e supporto continuativo.
           </p>
 
           {/* CTA Buttons */}
@@ -79,7 +80,7 @@ export default function Hero() {
 
           {/* Trust indicator */}
           <p className="text-sm text-gray-500">
-            Rispondiamo in poche ore
+            Rispondiamo in poche ore.
           </p>
         </div>
       </div>

@@ -6,7 +6,7 @@ const steps = [
     icon: MessageSquare,
     title: 'Ascolto e analisi',
     description:
-      'Partiamo sempre dall\'ascolto. Ci racconti il tuo progetto, i tuoi obiettivi, le tue esigenze. Facciamo domande, approfondiamo, capiamo il contesto. Solo così possiamo proporti una soluzione che abbia davvero senso per te, non una soluzione generica.',
+      'Il lavoro inizia dall'ascolto. Vengono raccolti obiettivi, requisiti, materiali e vincoli. L'analisi del contesto porta a definire che tipo di soluzione è effettivamente adatta al caso specifico.',
     color: 'cyan',
   },
   {
@@ -14,7 +14,7 @@ const steps = [
     icon: PenTool,
     title: 'Progettazione e wireframe',
     description:
-      'Definiamo insieme l\'architettura del progetto: le funzionalità, i flussi utente, la struttura delle pagine. Creiamo wireframe e prototipi cliccabili per farti vedere come funzionerà tutto, prima di scrivere una sola riga di codice.',
+      'Si disegna l'architettura del progetto: funzionalità, flussi utente, struttura delle pagine. Wireframe e prototipi cliccabili consentono di verificare in anticipo il funzionamento complessivo, prima di scrivere codice.',
     color: 'purple',
   },
   {
@@ -22,7 +22,7 @@ const steps = [
     icon: Code,
     title: 'Sviluppo e test',
     description:
-      'Scriviamo codice pulito, moderno e mantenibile. Sviluppiamo il frontend e il backend, integriamo le funzionalità concordate, testiamo su diversi dispositivi e browser. Ti teniamo aggiornato sul progresso con demo regolari.',
+      'Viene scritto codice pulito e manutenibile, integrando le funzionalità concordate. Il progetto è testato su dispositivi e browser diversi. L'avanzamento è condiviso con demo periodiche, in modo trasparente.',
     color: 'cyan',
   },
   {
@@ -30,7 +30,7 @@ const steps = [
     icon: Rocket,
     title: 'Lancio e supporto',
     description:
-      'Ti accompagniamo nella messa online: configurazione hosting, dominio, certificati SSL. Dopo il lancio restiamo disponibili per eventuali aggiustamenti, aggiornamenti e supporto. Un progetto digitale è vivo e ha bisogno di cure anche dopo la pubblicazione.',
+      'L'ultima fase comprende configurazione di hosting, dominio, certificato SSL e messa online. Dopo il lancio è possibile proseguire con correzioni, ottimizzazioni, aggiornamenti e manutenzione continuativa.',
     color: 'purple',
   },
 ];
@@ -52,8 +52,8 @@ export default function Process() {
               Come <span className="gradient-text">lavoriamo</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Un processo chiaro e trasparente, in quattro fasi. 
-              Sai sempre dove siamo e cosa succede dopo.
+              Un processo chiaro, articolato in quattro fasi. È sempre evidente 
+              a che punto si è arrivati e quale sarà il passo successivo.
             </p>
           </div>
 

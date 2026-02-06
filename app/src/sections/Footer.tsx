@@ -39,7 +39,7 @@ export default function Footer() {
                 Digital Studio & AI
               </p>
               <p className="text-xs text-gray-600 mt-2">
-                Ditta Individuale di Loredana Guida
+                Studio digitale indipendente
               </p>
             </div>
 

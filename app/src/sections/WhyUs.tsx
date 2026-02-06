@@ -4,27 +4,27 @@ const reasons = [
   {
     icon: UserCheck,
     title: 'Rapporto diretto',
-    description: 'Nessun intermediario, nessun account manager. Parli direttamente con chi sviluppa il tuo progetto. Comunicazione chiara e immediata.',
+    description: 'La comunicazione avviene direttamente con chi progetta e sviluppa. Questo riduce passaggi intermedi, fraintendimenti e tempi morti.',
   },
   {
     icon: Settings,
     title: 'Progetti su misura',
-    description: 'Non usiamo template rigidi o soluzioni preconfezionate. Ogni progetto è pensato e costruito specificamente per le tue esigenze.',
+    description: 'Non vengono utilizzati template rigidi come punto di arrivo. Ogni soluzione è progettata sui requisiti effettivi, con margine per crescere nel tempo.',
   },
   {
     icon: Brain,
     title: 'Approccio tecnico ma comprensibile',
-    description: 'Ti spieghiamo le cose in modo chiaro, senza tecnicismi inutili. Ma dietro c\'è sempre solidità tecnica e codice ben scritto.',
+    description: 'Le scelte tecniche sono spiegate in modo chiaro, senza linguaggio inutilmente complesso. Ogni decisione è supportata da motivazioni verificabili.',
   },
   {
     icon: Wrench,
     title: 'AI solo dove ha senso',
-    description: 'Integriamo l\'intelligenza artificiale solo quando aggiunge valore reale al progetto. Niente AI per moda, solo soluzioni utili.',
+    description: 'L'intelligenza artificiale è trattata come uno strumento. Viene adottata solo quando produce un valore reale e misurabile per il progetto.',
   },
   {
     icon: MessageCircle,
     title: 'Attenzione nel tempo',
-    description: 'Non ti lasciamo solo dopo il lancio. Offriamo supporto continuo, aggiornamenti e manutenzione per far crescere il tuo progetto.',
+    description: 'Dopo il lancio è possibile mantenere un rapporto continuativo per aggiornamenti, correzioni e miglioramenti progressivi. I progetti digitali sono considerati sistemi in evoluzione, non consegne puntuali e chiuse.',
   },
 ];
 
@@ -42,11 +42,11 @@ export default function WhyUs() {
               Vantaggi
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-6">
-              Perché scegliere <span className="gradient-text">noi</span>
+              Perché scegliere <span className="gradient-text">Attila Lab</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Motivi concreti per lavorare con Attila Lab. 
-              Nessuna promessa vana, solo fatti.
+              Alcuni elementi che caratterizzano il modo di lavorare dello studio 
+              e che possono fare la differenza in un progetto digitale.
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export default function WhyUs() {
           {/* CTA */}
           <div className="mt-16 text-center">
             <p className="text-gray-400 mb-6">
-              Convinto? Parliamo del tuo progetto.
+              Hai un progetto digitale in mente? Parliamone.
             </p>
             <a
               href="#contatti"

@@ -5,7 +5,7 @@ const services = [
     icon: Globe,
     title: 'Siti web e landing page',
     description:
-      'Progettiamo e sviluppiamo siti web moderni, veloci e ottimizzati. Dalle landing page mirate ai siti vetrina completi: curiamo il design responsivo, lo sviluppo frontend e il supporto alla pubblicazione. Ogni sito è pensato per rappresentare al meglio la tua attività e convertire i visitatori.',
+      'Progettiamo e sviluppiamo siti web moderni, veloci e ottimizzati. Dalle landing page mirate ai siti vetrina completi: curiamo design responsivo, sviluppo frontend e supporto alla pubblicazione. Ogni sito è pensato per rappresentare al meglio l'attività e trasformare i visitatori in contatti reali.',
     gradient: 'from-cyan-400 to-cyan-500',
     bgGradient: 'from-cyan-500/10 to-cyan-500/5',
   },
@@ -13,7 +13,7 @@ const services = [
     icon: LayoutDashboard,
     title: 'Web-app e dashboard su misura',
     description:
-      'Costruiamo strumenti online personalizzati: pannelli di controllo, aree riservate, gestionali leggeri e interfacce per la visualizzazione dati. Tutto è progettato sulle tue esigenze specifiche, senza forzare template preconfezionati che non si adattano al tuo flusso di lavoro.',
+      'Realizziamo strumenti online personalizzati: pannelli di controllo, aree riservate, gestionali leggeri e interfacce per la visualizzazione dei dati. Le funzionalità vengono definite sui processi esistenti, senza forzare modelli standard.',
     gradient: 'from-purple-500 to-purple-600',
     bgGradient: 'from-purple-500/10 to-purple-500/5',
   },
@@ -21,7 +21,7 @@ const services = [
     icon: Bot,
     title: 'Integrazioni AI e automazioni',
     description:
-      'Integriamo l\'intelligenza artificiale nei tuoi progetti dove ha davvero senso: chatbot intelligenti, analisi automatizzate di dati, piccoli motori di raccomandazione e workflow automatizzati. Nessuna buzzword, solo soluzioni concrete che migliorano l\'esperienza utente e ottimizzano i processi.',
+      'L'intelligenza artificiale viene integrata solo dove genera un beneficio misurabile: chatbot intelligenti, analisi automatizzate dei dati, motori di raccomandazione e workflow automatizzati. L'obiettivo è semplificare il lavoro e migliorare le performance del progetto.',
     gradient: 'from-cyan-400 to-purple-500',
     bgGradient: 'from-cyan-500/10 to-purple-500/5',
   },
@@ -29,7 +29,7 @@ const services = [
     icon: Lightbulb,
     title: 'Consulenza e prototipi digitali',
     description:
-      'Hai un\'idea ma non sai da dove partire? Ti aiutiamo a definirla. Analizziamo il tuo progetto, definiamo le funzionalità essenziali, creiamo prototipi cliccabili e ti forniamo una roadmap tecnica chiara. Così puoi valutare il percorso prima di impegnarti nello sviluppo completo.',
+      'Quando l'idea è ancora da definire, il primo passo è l'analisi. Vengono chiariti obiettivi, contesto e vincoli, individuate le funzionalità essenziali e realizzati prototipi cliccabili. Una roadmap tecnica precisa permette di valutare il progetto prima di impegnarsi nello sviluppo completo.',
     gradient: 'from-purple-500 to-cyan-400',
     bgGradient: 'from-purple-500/10 to-cyan-500/5',
   },
@@ -52,8 +52,8 @@ export default function Services() {
               Cosa possiamo fare per <span className="gradient-text">te</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Servizi digitali concreti, senza fronzoli. Ogni progetto è sviluppato 
-              su misura per rispondere alle tue esigenze specifiche.
+              Servizi digitali progettati in modo mirato. Ogni soluzione è sviluppata 
+              a partire da esigenze specifiche e obiettivi misurabili.
             </p>
           </div>
 

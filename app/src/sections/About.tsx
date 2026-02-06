@@ -20,20 +20,21 @@ export default function About() {
             {/* Left Column - Text */}
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                Attila Lab è lo studio digitale di{' '}
-                <span className="text-white font-medium">Loredana Guida</span>.
+                Attila Lab è uno studio digitale indipendente. Si occupa di sviluppo web, 
+                progettazione di interfacce e integrazioni con sistemi di intelligenza 
+                artificiale per aziende e professionisti.
               </p>
               
               <p className="text-gray-400 leading-relaxed">
-                Sviluppo web, UI/UX e soluzioni AI per aziende e professionisti. 
-                Esperienza concreta su progetti complessi: dashboard analitiche, 
-                motori di elaborazione dati e integrazioni su misura.
+                L'esperienza nasce da progetti complessi: dashboard analitiche, motori di 
+                elaborazione dati, web-app specializzate e automazioni costruite su casi 
+                d'uso reali.
               </p>
               
               <p className="text-gray-400 leading-relaxed">
-                Metodo diretto: un unico referente, pochi progetti contemporanei, 
-                massima attenzione ai dettagli. Senza stratificazioni aziendali 
-                né fronzoli di marketing.
+                L'organizzazione è essenziale: struttura snella, numero limitato di progetti 
+                in parallelo, attenzione costante ai dettagli. Nessuna struttura pesante, 
+                focus sui risultati e sulla qualità del lavoro.
               </p>
             </div>
 
@@ -43,9 +44,9 @@ export default function About() {
                 <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4">
                   <User className="w-6 h-6 text-cyan-400" />
                 </div>
-                <h3 className="text-white font-medium mb-2">Ditta Individuale</h3>
+                <h3 className="text-white font-medium mb-2">Struttura snella</h3>
                 <p className="text-sm text-gray-500">
-                  Loredana Guida, un unico referente diretto per ogni progetto
+                  Un unico studio, un referente tecnico diretto per ogni progetto digitale
                 </p>
               </div>
 
