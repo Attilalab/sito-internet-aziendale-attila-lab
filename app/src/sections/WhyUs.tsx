@@ -19,7 +19,7 @@ const reasons = [
   {
     icon: Wrench,
     title: 'AI solo dove ha senso',
-    description: 'L'intelligenza artificiale è trattata come uno strumento. Viene adottata solo quando produce un valore reale e misurabile per il progetto.',
+    description: "L'intelligenza artificiale è trattata come uno strumento. Viene adottata solo quando produce un valore reale e misurabile per il progetto."
   },
   {
     icon: MessageCircle,

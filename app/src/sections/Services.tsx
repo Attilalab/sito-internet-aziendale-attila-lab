@@ -5,7 +5,7 @@ const services = [
     icon: Globe,
     title: 'Siti web e landing page',
     description:
-      'Progettiamo e sviluppiamo siti web moderni, veloci e ottimizzati. Dalle landing page mirate ai siti vetrina completi: curiamo design responsivo, sviluppo frontend e supporto alla pubblicazione. Ogni sito è pensato per rappresentare al meglio l'attività e trasformare i visitatori in contatti reali.',
+      "Progettiamo e sviluppiamo siti web moderni, veloci e ottimizzati. Dalle landing page mirate ai siti vetrina completi: curiamo design responsivo, sviluppo frontend e supporto alla pubblicazione. Ogni sito è pensato per rappresentare al meglio l'attività e trasformare i visitatori in contatti reali.",
     gradient: 'from-cyan-400 to-cyan-500',
     bgGradient: 'from-cyan-500/10 to-cyan-500/5',
   },
@@ -21,7 +21,7 @@ const services = [
     icon: Bot,
     title: 'Integrazioni AI e automazioni',
     description:
-      'L'intelligenza artificiale viene integrata solo dove genera un beneficio misurabile: chatbot intelligenti, analisi automatizzate dei dati, motori di raccomandazione e workflow automatizzati. L'obiettivo è semplificare il lavoro e migliorare le performance del progetto.',
+      "L'intelligenza artificiale viene integrata solo dove genera un beneficio misurabile: chatbot intelligenti, analisi automatizzate dei dati, motori di raccomandazione e workflow automatizzati. L'obiettivo è semplificare il lavoro e migliorare le performance del progetto.",
     gradient: 'from-cyan-400 to-purple-500',
     bgGradient: 'from-cyan-500/10 to-purple-500/5',
   },
@@ -29,7 +29,7 @@ const services = [
     icon: Lightbulb,
     title: 'Consulenza e prototipi digitali',
     description:
-      'Quando l'idea è ancora da definire, il primo passo è l'analisi. Vengono chiariti obiettivi, contesto e vincoli, individuate le funzionalità essenziali e realizzati prototipi cliccabili. Una roadmap tecnica precisa permette di valutare il progetto prima di impegnarsi nello sviluppo completo.',
+      "Quando l'idea è ancora da definire, il primo passo è l'analisi. Vengono chiariti obiettivi, contesto e vincoli, individuate le funzionalità essenziali e realizzati prototipi cliccabili. Una roadmap tecnica precisa permette di valutare il progetto prima di impegnarsi nello sviluppo completo."
     gradient: 'from-purple-500 to-cyan-400',
     bgGradient: 'from-purple-500/10 to-cyan-500/5',
   },

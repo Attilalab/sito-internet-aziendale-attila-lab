@@ -6,7 +6,7 @@ const steps = [
     icon: MessageSquare,
     title: 'Ascolto e analisi',
     description:
-      'Il lavoro inizia dall'ascolto. Vengono raccolti obiettivi, requisiti, materiali e vincoli. L'analisi del contesto porta a definire che tipo di soluzione è effettivamente adatta al caso specifico.',
+      "Il lavoro inizia dall'ascolto. Vengono raccolti obiettivi, requisiti, materiali e vincoli. L'analisi del contesto porta a definire che tipo di soluzione è effettivamente adatta al caso specifico.",
     color: 'cyan',
   },
   {
@@ -14,7 +14,7 @@ const steps = [
     icon: PenTool,
     title: 'Progettazione e wireframe',
     description:
-      'Si disegna l'architettura del progetto: funzionalità, flussi utente, struttura delle pagine. Wireframe e prototipi cliccabili consentono di verificare in anticipo il funzionamento complessivo, prima di scrivere codice.',
+      "Si disegna l'architettura del progetto: funzionalità, flussi utente, struttura delle pagine. Wireframe e prototipi cliccabili consentono di verificare in anticipo il funzionamento complessivo, prima di scrivere codice.",
     color: 'purple',
   },
   {
@@ -22,7 +22,7 @@ const steps = [
     icon: Code,
     title: 'Sviluppo e test',
     description:
-      'Viene scritto codice pulito e manutenibile, integrando le funzionalità concordate. Il progetto è testato su dispositivi e browser diversi. L'avanzamento è condiviso con demo periodiche, in modo trasparente.',
+      "Viene scritto codice pulito e manutenibile, integrando le funzionalità concordate. Il progetto è testato su dispositivi e browser diversi. L'avanzamento è condiviso con demo periodiche, in modo trasparente.",
     color: 'cyan',
   },
   {
@@ -30,7 +30,7 @@ const steps = [
     icon: Rocket,
     title: 'Lancio e supporto',
     description:
-      'L'ultima fase comprende configurazione di hosting, dominio, certificato SSL e messa online. Dopo il lancio è possibile proseguire con correzioni, ottimizzazioni, aggiornamenti e manutenzione continuativa.',
+      "L'ultima fase comprende configurazione di hosting, dominio, certificato SSL e messa online. Dopo il lancio è possibile proseguire con correzioni, ottimizzazioni, aggiornamenti e manutenzione continuativa."
     color: 'purple',
   },
 ];
