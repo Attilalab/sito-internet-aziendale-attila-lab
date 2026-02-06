@@ -20,23 +20,20 @@ export default function About() {
             {/* Left Column - Text */}
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                Attila Lab è lo studio digitale della ditta individuale di{' '}
+                Attila Lab è lo studio digitale di{' '}
                 <span className="text-white font-medium">Loredana Guida</span>.
               </p>
               
               <p className="text-gray-400 leading-relaxed">
-                Dietro questo progetto ci sono anni di esperienza nello sviluppo web, 
-                nella progettazione di interfacce e nell'utilizzo dell'intelligenza 
-                artificiale in progetti reali. Abbiamo realizzato motori di analisi 
-                per videogiochi, dashboard complesse e soluzioni su misura per partner 
-                tecnologici.
+                Sviluppo web, UI/UX e soluzioni AI per aziende e professionisti. 
+                Esperienza concreta su progetti complessi: dashboard analitiche, 
+                motori di elaborazione dati e integrazioni su misura.
               </p>
               
               <p className="text-gray-400 leading-relaxed">
-                Lavoriamo con pochi progetti per volta, privilegiando la qualità del 
-                lavoro e la relazione diretta con chi ci contatta. Non siamo un'agenzia 
-                grande: siamo uno studio indipendente che crede nel fare le cose per bene, 
-                senza intermediari e senza chiacchiere di marketing.
+                Metodo diretto: un unico referente, pochi progetti contemporanei, 
+                massima attenzione ai dettagli. Senza stratificazioni aziendali 
+                né fronzoli di marketing.
               </p>
             </div>
 

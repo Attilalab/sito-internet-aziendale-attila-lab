@@ -32,7 +32,7 @@ export default function Footer() {
                 <img
                   src="/logo.jpeg"
                   alt="Attila Lab"
-                  className="h-12 w-auto rounded-lg drop-shadow-[0_0_12px_rgba(34,211,238,0.4)] hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.7)] transition-all duration-300 hover:scale-105"
+                  className="h-14 w-auto rounded-lg drop-shadow-[0_0_12px_rgba(34,211,238,0.4)] hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.7)] transition-all duration-300 hover:scale-105"
                 />
               </div>
               <p className="text-sm text-gray-500">
