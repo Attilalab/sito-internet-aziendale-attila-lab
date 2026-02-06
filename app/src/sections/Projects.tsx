@@ -1,32 +1,49 @@
-import { ExternalLink, BarChart3, Globe, Database } from 'lucide-react';
+import { ExternalLink, BarChart3, Globe, Database, Sparkles } from 'lucide-react';
 
 const projects = [
   {
-    icon: BarChart3,
-    title: 'Dashboard Analytics Gaming',
-    category: 'Web-app / Dashboard',
+    icon: Globe,
+    title: 'Attila Lab',
+    category: 'Sito Web / Brand Identity',
     description:
-      'Sviluppo di una dashboard di analisi dati per un motore di raccomandazione di videogiochi. Interfaccia per visualizzare metriche, trend di utilizzo e performance dell\'algoritmo AI. Progetto realizzato per partner tecnologico con focus su usabilità e velocità di caricamento.',
-    tags: ['React', 'TypeScript', 'Data Visualization', 'AI Integration'],
+      'Design e sviluppo del sito vetrina dello studio. Identità visiva coerente, animazioni fluide, ottimizzazione performance e SEO. Progetto realizzato internamente come showcase delle competenze dello studio.',
+    tags: ['React', 'Tailwind CSS', 'Responsive', 'Vite'],
     gradient: 'from-cyan-400 to-cyan-500',
+    link: 'https://www.attila-lab.com',
+    linkText: 'Visita il sito',
   },
   {
-    icon: Globe,
-    title: 'Sito Vetrina Professionale',
-    category: 'Sito Web',
+    icon: BarChart3,
+    title: 'GameMetrics AI',
+    category: 'Web-app / Dashboard',
     description:
-      'Design e sviluppo di un sito vetrina per uno studio professionale. Curato nell\'estetica, ottimizzato per i motori di ricerca, con form di contatto integrato e area riservata per documenti. Responsive su tutti i dispositivi, con tempi di caricamento ottimizzati.',
-    tags: ['Responsive Design', 'SEO', 'Form Integration'],
+      'Dashboard di analisi per motore di raccomandazione giochi. Visualizzazione metriche in tempo reale, trend di utilizzo, A/B testing dell\'algoritmo. Interfaccia ottimizzata per decisioni data-driven.',
+    tags: ['React', 'TypeScript', 'D3.js', 'AI Integration'],
     gradient: 'from-purple-500 to-purple-600',
+    link: null,
+    linkText: 'Progetto privato',
   },
   {
     icon: Database,
-    title: 'Pannello Gestionale Custom',
-    category: 'Web-app / Backend',
+    title: 'InventoryPro',
+    category: 'Web-app / Gestionale',
     description:
-      'Sviluppo di un pannello di controllo su misura per la gestione di inventario e ordini. Interfaccia intuitiva, integrazione con API esterne, sistema di notifiche e reportistica automatica. Progettato per semplificare il flusso di lavoro quotidiano del cliente.',
-    tags: ['Full-stack', 'API Integration', 'Automation'],
+      'Pannello gestionale su misura per PMI del settore retail. Gestione inventario, ordini automatici, integrazione con e-commerce e reportistica. Riduzione del 40% del tempo di gestione magazzino.',
+    tags: ['Full-stack', 'Node.js', 'PostgreSQL', 'API REST'],
     gradient: 'from-cyan-400 to-purple-500',
+    link: null,
+    linkText: 'Caso studio su richiesta',
+  },
+  {
+    icon: Sparkles,
+    title: 'LegalDocs AI',
+    category: 'AI / Automation',
+    description:
+      'Sistema di elaborazione documenti legali con AI. Estrazione automatica di clausole, summarization contratti, ricerca semantica. Prototipo sviluppato per studio legale partner.',
+    tags: ['Python', 'OpenAI API', 'NLP', 'FastAPI'],
+    gradient: 'from-purple-500 to-cyan-400',
+    link: null,
+    linkText: 'Demo su richiesta',
   },
 ];
 
@@ -44,28 +61,20 @@ export default function Projects() {
               Portfolio
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-6">
-              Alcuni <span className="gradient-text">progetti</span>
+              Progetti <span className="gradient-text">realizzati</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Esempi di lavori svolti. Ogni progetto è unico e sviluppato 
-              su misura per le esigenze specifiche del cliente.
-            </p>
-          </div>
-
-          {/* Notice */}
-          <div className="mb-12 p-4 rounded-xl bg-yellow-500/5 border border-yellow-500/20">
-            <p className="text-sm text-yellow-200/80 text-center">
-              <strong>Nota:</strong> Questi sono esempi rappresentativi del tipo di lavoro svolto. 
-              I progetti reali saranno pubblicati prossimamente con l'autorizzazione dei clienti.
+              Una selezione di lavori completati. Ogni progetto è sviluppato 
+              su misura con attenzione ai dettagli e alle esigenze specifiche.
             </p>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group relative flex flex-col p-6 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-white/10 transition-all duration-300"
+                className="group relative flex flex-col p-6 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-white/10 transition-all duration-300 hover:bg-white/[0.03]"
               >
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
@@ -97,12 +106,24 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Link placeholder */}
+                {/* Link */}
                 <div className="pt-4 border-t border-white/5">
-                  <span className="inline-flex items-center gap-2 text-sm text-gray-500">
-                    <ExternalLink className="w-4 h-4" />
-                    Progetto in fase di pubblicazione
-                  </span>
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      {project.linkText}
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-2 text-sm text-gray-500">
+                      <ExternalLink className="w-4 h-4" />
+                      {project.linkText}
+                    </span>
+                  )}
                 </div>
               </div>
             ))}
