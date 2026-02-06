@@ -30,7 +30,7 @@ const steps = [
     icon: Rocket,
     title: 'Lancio e supporto',
     description:
-      "L'ultima fase comprende configurazione di hosting, dominio, certificato SSL e messa online. Dopo il lancio è possibile proseguire con correzioni, ottimizzazioni, aggiornamenti e manutenzione continuativa."
+      "L'ultima fase comprende configurazione di hosting, dominio, certificato SSL e messa online. Dopo il lancio è possibile proseguire con correzioni, ottimizzazioni, aggiornamenti e manutenzione continuativa.",
     color: 'purple',
   },
 ];

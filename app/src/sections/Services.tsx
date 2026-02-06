@@ -29,7 +29,7 @@ const services = [
     icon: Lightbulb,
     title: 'Consulenza e prototipi digitali',
     description:
-      "Quando l'idea è ancora da definire, il primo passo è l'analisi. Vengono chiariti obiettivi, contesto e vincoli, individuate le funzionalità essenziali e realizzati prototipi cliccabili. Una roadmap tecnica precisa permette di valutare il progetto prima di impegnarsi nello sviluppo completo."
+      "Quando l'idea è ancora da definire, il primo passo è l'analisi. Vengono chiariti obiettivi, contesto e vincoli, individuate le funzionalità essenziali e realizzati prototipi cliccabili. Una roadmap tecnica precisa permette di valutare il progetto prima di impegnarsi nello sviluppo completo.",
     gradient: 'from-purple-500 to-cyan-400',
     bgGradient: 'from-purple-500/10 to-cyan-500/5',
   },
