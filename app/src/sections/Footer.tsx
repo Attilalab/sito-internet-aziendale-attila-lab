@@ -8,6 +8,12 @@ const navLinks = [
   { label: 'Contatti', href: '#contatti' },
 ];
 
+const legalLinks = [
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Cookie Policy', href: '/cookie-policy' },
+  { label: 'Note legali', href: '/note-legali' },
+];
+
 export default function Footer() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -75,15 +81,24 @@ export default function Footer() {
             <p className="text-xs text-gray-600">
               © {new Date().getFullYear()} Attila Lab. Tutti i diritti riservati.
             </p>
-            <div className="flex items-center gap-6 text-xs text-gray-600">
-              <span>P.IVA: [in attesa di attribuzione]</span>
-              <a 
-                href="mailto:attila.lab@hotmail.com"
-                className="hover:text-gray-400 transition-colors"
-              >
-                attila.lab@hotmail.com
-              </a>
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-xs text-gray-600">
+              <span>P.IVA: 05453570755</span>
+              <span className="hidden sm:inline">|</span>
+              <span>Via Trento 69, 73010 Surbo (LE)</span>
             </div>
+          </div>
+
+          {/* Legal links */}
+          <div className="mt-6 flex flex-wrap justify-center gap-6 text-xs">
+            {legalLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-gray-500 hover:text-gray-300 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>

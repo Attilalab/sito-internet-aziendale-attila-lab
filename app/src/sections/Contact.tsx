@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { Checkbox } from '@/components/ui/checkbox';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
@@ -11,6 +12,7 @@ export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,6 +22,8 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!privacyAccepted) return;
+    
     setIsLoading(true);
     setError('');
 
@@ -42,6 +46,7 @@ export default function Contact() {
 
       setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', title: '' });
+      setPrivacyAccepted(false);
       
       setTimeout(() => {
         setIsSubmitted(false);
@@ -170,10 +175,33 @@ export default function Contact() {
                     {error && (
                       <p className="text-red-400 text-sm">{error}</p>
                     )}
+
+                    {/* Checkbox Privacy */}
+                    <div className="flex items-start space-x-3">
+                      <Checkbox
+                        id="privacy"
+                        checked={privacyAccepted}
+                        onCheckedChange={(checked) => setPrivacyAccepted(checked === true)}
+                        className="mt-1 border-white/20 data-[state=checked]:bg-cyan-500 data-[state=checked]:border-cyan-500"
+                      />
+                      <Label
+                        htmlFor="privacy"
+                        className="text-sm text-gray-400 leading-relaxed cursor-pointer"
+                      >
+                        Dichiaro di aver preso visione della{' '}
+                        <a
+                          href="/privacy-policy"
+                          className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                        >
+                          Privacy Policy
+                        </a>
+                        <span className="text-cyan-400"> *</span>
+                      </Label>
+                    </div>
                     
                     <Button
                       type="submit"
-                      disabled={isLoading}
+                      disabled={isLoading || !privacyAccepted}
                       className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 h-auto text-base font-medium text-[#0a0c10] bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full hover:from-cyan-300 hover:to-cyan-400 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
                     >
                       {isLoading ? (
@@ -188,6 +216,18 @@ export default function Contact() {
                         </>
                       )}
                     </Button>
+
+                    {/* Testo privacy sotto il bottone */}
+                    <p className="text-xs text-gray-500">
+                      I dati forniti saranno trattati secondo la nostra{' '}
+                      <a
+                        href="/privacy-policy"
+                        className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                      >
+                        Privacy Policy
+                      </a>
+                      .
+                    </p>
                   </form>
                 )}
               </div>
@@ -237,7 +277,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm text-gray-500 mb-1">Sede</p>
-                      <p className="text-white">Italia</p>
+                      <p className="text-white">Via Trento 69, 73010 Surbo (LE)</p>
                     </div>
                   </div>
                 </div>
@@ -250,8 +290,10 @@ export default function Contact() {
                 </h3>
                 <div className="space-y-2 text-sm text-gray-400">
                   <p>Attila Lab - Digital Studio & AI</p>
-                  <p>P.IVA: [in attesa di attribuzione]</p>
-                  <p>Sede legale: Italia</p>
+                  <p>P.IVA: 05453570755</p>
+                  <p>Sede legale: Via Trento 69, 73010 Surbo (LE)</p>
+                  <p>Numero REA: 368026</p>
+                  <p>Registro Imprese: Lecce</p>
                 </div>
               </div>
             </div>
