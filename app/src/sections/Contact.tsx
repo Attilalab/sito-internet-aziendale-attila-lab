@@ -23,19 +23,28 @@ export default function Contact() {
     setIsLoading(true);
     setError('');
 
+    if (!formRef.current) return;
+
     try {
-      await emailjs.send(
+      // Aggiungo campi nascosti per EmailJS
+      const form = formRef.current;
+      
+      // Creo input nascosti per i parametri extra
+      const timeInput = document.createElement('input');
+      timeInput.type = 'hidden';
+      timeInput.name = 'time';
+      timeInput.value = new Date().toLocaleString('it-IT');
+      form.appendChild(timeInput);
+
+      await emailjs.sendForm(
         'service_pop8uae',
         'template_83plbpm',
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone || 'Non fornito',
-          message: formData.message,
-          time: new Date().toLocaleString('it-IT'),
-        },
+        form,
         'l6vIjPkz4Hqffr9Os'
       );
+
+      // Rimuovo l'input aggiunto
+      form.removeChild(timeInput);
 
       setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
@@ -43,18 +52,24 @@ export default function Contact() {
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    } catch (err) {
+    } catch (err: any) {
       console.error('EmailJS Error:', err);
-      setError('Errore nell\'invio. Riprova più tardi.');
+      setError(`Errore: ${err.text || 'Riprova più tardi'}`);
     } finally {
       setIsLoading(false);
     }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const fieldName = e.target.name;
+    // Mappa i nomi dei campi EmailJS ai nomi dello state
+    const stateField = fieldName === 'from_name' ? 'name' : 
+                       fieldName === 'reply_to' ? 'email' : 
+                       fieldName;
+    
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [stateField]: e.target.value
     }));
   };
 
@@ -98,6 +113,9 @@ export default function Contact() {
                   </div>
                 ) : (
                   <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                    {/* Input nascosti per EmailJS */}
+                    <input type="hidden" name="to_email" value="attila.lab@hotmail.com" />
+                    
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="name" className="text-gray-300">
@@ -105,7 +123,7 @@ export default function Contact() {
                         </Label>
                         <Input
                           id="name"
-                          name="name"
+                          name="from_name"
                           type="text"
                           required
                           value={formData.name}
@@ -120,7 +138,7 @@ export default function Contact() {
                         </Label>
                         <Input
                           id="email"
-                          name="email"
+                          name="reply_to"
                           type="email"
                           required
                           value={formData.email}
