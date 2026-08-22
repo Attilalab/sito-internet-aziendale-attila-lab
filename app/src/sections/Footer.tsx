@@ -17,10 +17,7 @@ const legalLinks = [
 export default function Footer() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToTop = () => {
@@ -28,8 +25,16 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative py-16 bg-[#0a0c10] border-t border-white/5">
-      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-20">
+    <footer className="relative pt-20 pb-10 border-t border-white/5 overflow-hidden">
+      {/* Watermark */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute -bottom-8 left-1/2 -translate-x-1/2 font-display font-bold text-[18vw] leading-none text-outline opacity-40 whitespace-nowrap"
+      >
+        ATTILA LAB
+      </div>
+
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             {/* Logo and Info */}
@@ -38,13 +43,16 @@ export default function Footer() {
                 <img
                   src="/logo.jpeg"
                   alt="Attila Lab"
-                  className="h-16 w-auto rounded-lg drop-shadow-[0_0_12px_rgba(34,211,238,0.4)] hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.7)] transition-all duration-300 hover:scale-105"
+                  className="h-12 w-auto rounded-lg drop-shadow-[0_0_12px_rgba(163, 230, 53,0.4)]"
                 />
+                <div>
+                  <p className="font-display font-semibold text-white">
+                    Attila<span className="text-lime-400">Lab</span>
+                  </p>
+                  <p className="text-xs text-gray-500">Digital Studio & AI</p>
+                </div>
               </div>
-              <p className="text-sm text-gray-500">
-                Digital Studio & AI
-              </p>
-              <p className="text-xs text-gray-600 mt-2">
+              <p className="text-xs text-gray-600">
                 Studio digitale indipendente
               </p>
             </div>
@@ -66,13 +74,13 @@ export default function Footer() {
             {/* Back to top */}
             <button
               onClick={scrollToTop}
-              className="group flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:border-cyan-500/30 transition-colors"
+              className="group flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:border-lime-500/30 transition-colors"
               aria-label="Torna in cima"
             >
               <span className="text-sm text-gray-400 group-hover:text-white transition-colors">
                 Torna su
               </span>
-              <ArrowUp className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+              <ArrowUp className="w-4 h-4 text-gray-400 group-hover:text-lime-400 transition-colors" />
             </button>
           </div>
 

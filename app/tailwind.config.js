@@ -8,14 +8,6 @@ module.exports = {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       colors: {
-        cyan: {
-          400: '#00d4ff',
-          500: '#00b8e6',
-        },
-        purple: {
-          500: '#7c3aed',
-          600: '#6d28d9',
-        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
