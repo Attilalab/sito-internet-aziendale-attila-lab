@@ -45,7 +45,7 @@ function handleSpotlight(e: React.MouseEvent<HTMLDivElement>) {
 export default function Services() {
   return (
     <section id="servizi" className="relative py-24 lg:py-32">
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-600/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-600/5 rounded-full blur-[150px] max-md:blur-[60px] pointer-events-none" />
 
       <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-20 relative z-10">
         <div className="max-w-6xl mx-auto">

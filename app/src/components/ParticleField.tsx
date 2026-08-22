@@ -11,6 +11,8 @@ export default function ParticleField({ className = '' }: { className?: string }
     const canvas = canvasRef.current;
     if (!canvas) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // Skip the particle canvas on small/touch screens: too expensive on mobile GPUs
+    if (window.matchMedia('(max-width: 768px)').matches) return;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;

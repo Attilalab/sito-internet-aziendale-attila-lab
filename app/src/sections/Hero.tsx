@@ -55,6 +55,8 @@ export default function Hero() {
   const orb2Y = useTransform(sy, (v) => v * -60);
 
   useEffect(() => {
+    // Mouse parallax only where a fine pointer exists (not on touch devices)
+    if (!window.matchMedia('(pointer: fine)').matches) return;
     const move = (e: MouseEvent) => {
       mx.set(e.clientX / window.innerWidth - 0.5);
       my.set(e.clientY / window.innerHeight - 0.5);
@@ -69,18 +71,18 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col overflow-hidden noise">
+    <section id="home" className="relative min-h-svh flex flex-col overflow-hidden noise">
       {/* Background */}
       <div className="absolute inset-0 bg-[#04050a]">
         <motion.div
           style={{ x: orb1X, y: orb1Y }}
-          className="absolute -top-32 -left-32 w-[650px] h-[650px] bg-lime-500/15 rounded-full blur-[140px]"
+          className="absolute -top-32 -left-32 w-[650px] h-[650px] bg-lime-500/15 rounded-full blur-[140px] max-md:blur-[60px]"
         />
         <motion.div
           style={{ x: orb2X, y: orb2Y }}
-          className="absolute top-1/3 -right-40 w-[600px] h-[600px] bg-emerald-600/15 rounded-full blur-[150px]"
+          className="absolute top-1/3 -right-40 w-[600px] h-[600px] bg-emerald-600/15 rounded-full blur-[150px] max-md:blur-[60px]"
         />
-        <div className="absolute -bottom-40 left-1/3 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[130px] animate-aurora-3" />
+        <div className="absolute -bottom-40 left-1/3 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[130px] max-md:blur-[50px] animate-aurora-3" />
 
         {/* Grid */}
         <div

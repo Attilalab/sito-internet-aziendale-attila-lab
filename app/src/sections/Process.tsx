@@ -34,7 +34,7 @@ const steps = [
 export default function Process() {
   return (
     <section id="metodo" className="relative py-24 lg:py-32">
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-lime-500/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-lime-500/5 rounded-full blur-[150px] max-md:blur-[60px] pointer-events-none" />
 
       <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-20 relative z-10">
         <div className="max-w-6xl mx-auto">

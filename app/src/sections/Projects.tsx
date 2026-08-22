@@ -77,7 +77,7 @@ const projects: Project[] = [
 export default function Projects() {
   return (
     <section id="progetti" className="relative py-24 lg:py-32 noise">
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-lime-500/5 rounded-full blur-[200px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-lime-500/5 rounded-full blur-[200px] max-md:blur-[80px] pointer-events-none" />
 
       <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-20 relative z-10">
         <div className="max-w-6xl mx-auto">

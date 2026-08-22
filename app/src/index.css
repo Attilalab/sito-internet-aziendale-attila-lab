@@ -167,6 +167,7 @@
     background: rgba(163, 230, 53, 0.04);
     border: 1px solid rgba(163, 230, 53, 0.35);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     box-shadow: inset 0 0 40px rgba(163, 230, 53, 0.06);
   }
 
@@ -265,6 +266,24 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* Mobile performance: backdrop-filter and heavy effects freeze iOS Safari */
+@media (max-width: 768px) {
+  .glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .noise::after {
+    display: none;
+  }
+
+  .cube-face {
+    backdrop-filter: none;
+    background: rgba(10, 13, 20, 0.85);
   }
 }
 
