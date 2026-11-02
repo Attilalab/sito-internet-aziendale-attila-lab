@@ -165,15 +165,6 @@ export default function Hero() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Magnetic>
-              <Magnetic strength={0.2}>
-                <a
-                  href="#progetti"
-                  onClick={scrollTo('#progetti')}
-                  className="inline-flex items-center gap-2 px-8 py-4 text-base font-medium text-white border border-white/15 rounded-full hover:bg-white/5 hover:border-white/30 transition-all duration-300"
-                >
-                  Vedi i nostri lavori
-                </a>
-              </Magnetic>
             </motion.div>
           </div>
 

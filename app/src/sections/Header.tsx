@@ -5,9 +5,10 @@ const navItems = [
   { label: 'Home', href: '#home' },
   { label: 'Servizi', href: '#servizi' },
   { label: 'Metodo', href: '#metodo' },
-  { label: 'Progetti', href: '#progetti' },
   { label: 'Contatti', href: '#contatti' },
 ];
+
+const SHOP_URL = 'https://shop.attila-lab.net/';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,9 +37,9 @@ export default function Header() {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3" onClick={(e) => handleNavClick(e, '#home')}>
             <img
-              src="/logo.jpeg"
+              src="/robot-head.png"
               alt="Attila Lab"
-              className="h-11 w-auto rounded-lg drop-shadow-[0_0_12px_rgba(163, 230, 53,0.4)] hover:drop-shadow-[0_0_20px_rgba(163, 230, 53,0.7)] transition-all duration-300 hover:scale-105"
+              className="h-12 w-12 object-contain drop-shadow-[0_0_12px_rgba(163,230,53,0.35)] transition-transform duration-300 hover:scale-105"
             />
             <span className="font-display font-semibold text-lg tracking-tight hidden sm:block">
               Attila<span className="text-lime-400">Lab</span>
@@ -58,6 +59,15 @@ export default function Header() {
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-lime-400 to-emerald-500 transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
+            <a
+              href={SHOP_URL}
+              target="_blank"
+              rel="noreferrer"
+              title="Accessori gaming, miniature da foto e creazioni su misura"
+              className="text-sm text-lime-300 hover:text-lime-200 transition-colors duration-200"
+            >
+              Shop
+            </a>
           </nav>
 
           {/* CTA Button Desktop */}
@@ -98,6 +108,17 @@ export default function Header() {
               {item.label}
             </a>
           ))}
+          <a
+            href={SHOP_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="text-base text-lime-300 hover:text-lime-200 transition-colors py-2"
+          >
+            Shop
+            <span className="mt-1 block text-xs font-normal text-gray-500">
+              Accessori gaming, miniature da foto e creazioni su misura
+            </span>
+          </a>
           <a
             href="#contatti"
             onClick={(e) => handleNavClick(e, '#contatti')}

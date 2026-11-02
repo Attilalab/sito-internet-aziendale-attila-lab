@@ -4,7 +4,6 @@ const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Servizi', href: '#servizi' },
   { label: 'Metodo', href: '#metodo' },
-  { label: 'Progetti', href: '#progetti' },
   { label: 'Contatti', href: '#contatti' },
 ];
 
@@ -41,9 +40,9 @@ export default function Footer() {
             <div className="text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
                 <img
-                  src="/logo.jpeg"
+                  src="/robot-head.png"
                   alt="Attila Lab"
-                  className="h-12 w-auto rounded-lg drop-shadow-[0_0_12px_rgba(163, 230, 53,0.4)]"
+                  className="h-14 w-14 object-contain drop-shadow-[0_0_12px_rgba(163,230,53,0.35)]"
                 />
                 <div>
                   <p className="font-display font-semibold text-white">
@@ -54,6 +53,17 @@ export default function Footer() {
               </div>
               <p className="text-xs text-gray-600">
                 Studio digitale indipendente
+              </p>
+              <p className="mt-3 max-w-xs text-xs leading-relaxed text-gray-500">
+                Nello shop trovi accessori gaming, miniature da foto e creazioni su misura.{' '}
+                <a
+                  href="https://shop.attila-lab.net/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-lime-400 hover:text-lime-300 transition-colors"
+                >
+                  shop.attila-lab.net
+                </a>
               </p>
             </div>
 
